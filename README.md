@@ -43,15 +43,25 @@ sudo mv /home/pi/autopolls/schedule.wpi /home/pi/wittypi/schedule.wpi
 
 # Setup external storage mount
 
-Assumes you're using an external storage drive that shows up as /dev/sda1.
-To format the drive as ntfs (to allow for >2TB volumes) in fdisk you will need to:
-
+Assumes you're using an external storage drive that shows up as /dev/sda1. \
+Check via: 
 ```bash
-echo "UUID=605A-99E3 /mnt/autopolls exfat defaults,auto,users,rw,nofail,umask=000 0 0" | sudo tee -a /etc/fstab
+sudo fdisk -l
+```
+Create mount directory
+```bash
 sudo mkdir /mnt/autopolls
 sudo mount /dev/sda1 /mnt/autopolls
 ```
-
+Automatically mount this specific external drive to the mount directory off boot\
+Check UUID of drive; ex: 605A-99E3
+```bash
+fdisk -l
+```
+Run the following command after replacing "XXXX-XXXX" with found UUID
+```bash
+echo "UUID=XXX-XXXX /mnt/autopolls exfat defaults,auto,users,rw,nofail,umask=000 0 0" | sudo tee -a /etc/fstab
+```
 # Add sensor and camera scripts to cronjob
 
 Open cronjobs
