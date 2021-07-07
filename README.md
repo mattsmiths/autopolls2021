@@ -29,9 +29,9 @@ git clone https://github.com/mattsmiths/autopolls.git
 Make sure the witty pi mini is attached and receiving power into the micro-usb port
 
 ```bash
-wget http://wwww.uugear.com/repo/WittyPi3/install.sh\
-sudo sh install.sh\
-reboot\
+wget http://wwww.uugear.com/repo/WittyPi3/install.sh
+sudo sh install.sh
+reboot
 ```
 
 Move the autopolls schedule to the witty pi directory
