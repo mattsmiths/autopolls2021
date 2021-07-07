@@ -9,7 +9,7 @@ if os.path.isfile('/home/pi/sensorLogger.txt') == False:
   o1 = open('/home/pi/sensorLogger.txt','a')
   o1.close()
   
- o1 = open('/home/pi/sensorLogger','a')
+o1 = open('/home/pi/sensorLogger','a')
 i2c = busio.I2C(board.SCL,board.SDA)
 sensor = MS8607(i2c)
 
