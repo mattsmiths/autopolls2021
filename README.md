@@ -3,12 +3,15 @@ Autopolls ~Installation notes~
 
 
 # Install system requirements
-
+Update system
 ```bash
 sudo apt update
 sudo apt full-upgrade
+```
+Install python libraries
+```bash
 sudo pip3 install adafruit-circuitpython-ms8607
-sudo apt install python3-numpy python3-opencv python3-requests python3-flask python3-systemd nginx-full vsftpd virtualenvwrapper apache2-utils python3-gst-1.0 
+sudo apt install python3-numpy python3-opencv
 ```
 
 # Clone this repository
