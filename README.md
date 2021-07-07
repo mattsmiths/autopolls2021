@@ -76,7 +76,7 @@ Add the following two lines to the end of crontab -e file
 
 ```bash
 * * * * * ( /home/pi/autopolls/minutePicture.sh)
-* * * * * ( sudo python3 /home/pi/autopolls/newSensor.py)
+* * * * * ( sudo python3 /home/pi/autopolls/sensorCall.py)
 ```
 
 
