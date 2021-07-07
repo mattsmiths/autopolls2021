@@ -58,7 +58,8 @@ sudo mount /dev/sda1 /mnt/autopolls
 Automatically mount this specific external drive to the mount directory off boot\
 Check UUID of drive; ex: 605A-99E3
 ```bash
-fdisk -l
+sudo fdisk -l
+sudo blkid
 ```
 Run the following command after replacing "XXXX-XXXX" with found UUID
 ```bash
