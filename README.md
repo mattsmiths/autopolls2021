@@ -1,6 +1,4 @@
-# autopolls
-
-Installation notes
+Autopolls ~Installation notes~
 -----
 
 
