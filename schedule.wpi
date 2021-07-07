@@ -1,0 +1,7 @@
+# Turn on raspberry pi for 14 hours starting at 06:00 and ending at 20:00 everyday
+
+BEGIN   2021-06-09 06:00:00
+END     2035-07-31 23:59:59
+
+ON      H14       # Keep on for 14 hours
+OFF     H10       # Turn off for 10 hours
