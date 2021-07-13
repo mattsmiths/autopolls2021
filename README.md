@@ -19,8 +19,6 @@ sudo apt install python3-numpy python3-opencv
 Prepare for and clone this repository
 ```bash
 . ~/.bashrc
-mkdir -p ~/autopolls
-cd ~/autopolls
 git clone https://github.com/mattsmiths/autopolls.git
 ```
 
