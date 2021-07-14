@@ -77,4 +77,51 @@ Add the following two lines to the end of crontab -e file
 * * * * * ( sudo python3 /home/pi/autopolls/sensorCall.py)
 ```
 
+# Add realtime clock to Raspberry pi
+
+In terminal, confirm that clock is at position 68 in I2C
+```bash
+sudo i2cdetect -y 1
+```
+
+Add the following lines to the end of boot config.txt
+```bash
+sudo nano /boot/config.txt
+```
+Add the following line within that file and save
+```bash
+dtoverlay=i2c-rtc,pcf8523
+```
+
+Reboot
+```bash
+sudo reboot
+```
+Run the following commands in terminal
+```bash
+sudo apt-get -y remove fake-hwclock
+sudo update-rc.d -f fake-hwclock remove
+sudo systemctl disable fake-hwclock
+```
+
+Start the original hardware clock script
+```bash
+sudo nano /lib/udev/hwclock-set
+```
+Comment out these lines
+```bash
+#if[-e /run/systemd/system];then
+#exit 0
+#fi
+#/sbin/hwclock --rtc=$dev --systz --badyear
+#/sbin/hwclock --rtc=$dev --systz
+```
+
+Sync time from Pi to RTC *Make sure batter is in RTC*, and you're connected to the internet
+```bash
+sudo hwclock -r
+sudo hwclock -w
+sudo hwclock -r
+```
+
 
