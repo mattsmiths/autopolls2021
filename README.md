@@ -84,13 +84,9 @@ In terminal, confirm that clock is at position 68 in I2C
 sudo i2cdetect -y 1
 ```
 
-Add the following lines to the end of boot config.txt
+Add the following lines to the end of boot config.txt by running the code below
 ```bash
-sudo nano /boot/config.txt
-```
-Add the following line within that file and save
-```bash
-dtoverlay=i2c-rtc,pcf8523
+echo "dtoverlay=i2c-rtc,pcf8523" | sudo tee -a /boot/config.txt
 ```
 
 Reboot
