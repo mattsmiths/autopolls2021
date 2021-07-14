@@ -61,7 +61,7 @@ sudo blkid
 ```
 Run the following command after replacing "XXXX-XXXX" with found UUID
 ```bash
-echo "UUID=XXX-XXXX /mnt/autopolls exfat defaults,auto,users,rw,nofail,umask=000 0 0" | sudo tee -a /etc/fstab
+echo "UUID=605A-99E3 /mnt/autopolls exfat defaults,auto,users,rw,nofail,umask=000 0 0" | sudo tee -a /etc/fstab
 ```
 # Add sensor and camera scripts to cronjob
 
