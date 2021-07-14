@@ -117,7 +117,7 @@ Comment out these lines
 #/sbin/hwclock --rtc=$dev --systz
 ```
 
-Sync time from Pi to RTC *Make sure batter is in RTC*, and you're connected to the internet
+Sync time from Pi to RTC *Make sure battery is in RTC*, and you're connected to the internet
 ```bash
 sudo hwclock -r
 sudo hwclock -w
