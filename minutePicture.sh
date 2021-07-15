@@ -3,7 +3,7 @@
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 HOURCHK=$(date +"%H")
 
-if $([ $(($HOURCHECK)) -gt 5 ]) && $([ $(($HOURCHECK)) -lt 22 ])
+if $([ $(($HOURCHK)) -gt 5 ]) && $([ $(($HOURCHK)) -lt 22 ])
   raspistill --nopreview -ss 3000 -t 55000 --timelapse 1000 -o /mnt/autopolls/$DATE%06d.jpg
 fi
 
