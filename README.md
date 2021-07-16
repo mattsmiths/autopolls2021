@@ -21,6 +21,7 @@ Prepare for and clone this repository
 . ~/.bashrc
 git clone https://github.com/mattsmiths/autopolls.git
 sudo chmod +x /home/pi/autopolls/minutePicture.sh
+sudo chmod +x /home/pi/autopolls/mkFolder.sh
 ```
 
 # Install wittyPi mini software
