@@ -1,10 +1,13 @@
 #!/bin/bash
 
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
+PDIR=$(date +"%Y-%m-%d_%H")
+mkdir -p /mnt/autopolls/$PDIR
+
 HOURCHK=$(date +"%H")
 
 if $([ $(($HOURCHK)) -gt 5 ]) && $([ $(($HOURCHK)) -lt 22 ])
-  raspistill --nopreview -ss 3000 -t 55000 --timelapse 1000 -o /mnt/autopolls/$DATE%06d.jpg
+  raspistill --nopreview -ss 3000 -t 55000 --timelapse 1000 -o /mnt/autopolls/$PDIR/$DATE%06d.jpg
 fi
 
 #raspistill --nopreview -ss 3000 -t 55000 --timelapse 1000 -o /mnt/autopolls/$DATE%06d.jpg
