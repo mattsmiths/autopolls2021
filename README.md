@@ -71,10 +71,12 @@ Open cronjobs
 crontab -e
 ```
 
-Add the following two lines to the end of crontab -e file
+Add the following two lines to the end of crontab -e file. Runs image capture script every minute from 5am - 10pm everyday.
 
 ```bash
-* * * * * ( /home/pi/autopolls/minutePicture.sh)
+@reboot ( /home/pi/autopolls/mkFolder.sh)
+0 * * * * ( /home/pi/autopolls/mkFolder.sh)
+* 05-22 * * * ( /home/pi/autopolls/minutePicture.sh)
 * * * * * ( sudo python3 /home/pi/autopolls/sensorCall.py)
 ```
 
