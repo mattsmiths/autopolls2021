@@ -43,7 +43,7 @@ Move the autopolls schedule to the witty pi directory
 ```bash
 cd ~/
 sudo mv /home/pi/autopolls/schedule.wpi /home/pi/wittypi/schedule.wpi
-~./wittyPi/runScript.sh
+~./wittypi/runScript.sh
 ```
 
 # Setup external storage mount
