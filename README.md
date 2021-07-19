@@ -30,8 +30,11 @@ Make sure the witty pi mini is attached and receiving power into the micro-usb p
 
 ```bash
 cd ~/
-wget http://wwww.uugear.com/repo/WittyPi3/install.sh
+wget http://www.uugear.com/repo/WittyPi3/install.sh
 sudo sh install.sh
+```
+
+```bash
 reboot
 ```
 
@@ -40,7 +43,7 @@ Move the autopolls schedule to the witty pi directory
 ```bash
 cd ~/
 sudo mv /home/pi/autopolls/schedule.wpi /home/pi/wittypi/schedule.wpi
-~./runScript.sh
+~./wittyPi/runScript.sh
 ```
 
 # Setup external storage mount
