@@ -14,6 +14,10 @@ sudo pip3 install adafruit-circuitpython-ms8607
 sudo pip3 install adafruit-circuitpython-bh1750
 sudo apt install python3-numpy python3-opencv
 ```
+Raspistill firmware patch for timeout
+```
+sudo rpi-update
+```
 
 # Clone this repository
 
